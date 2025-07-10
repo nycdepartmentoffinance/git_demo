@@ -8,7 +8,8 @@ data <- readr::read_csv("data/quintos_sample_revised.csv")
 # add a new column, logged price
 output_data <- data %>%
     mutate(
-        log_price = log(price)
+        log_price = log(price),
+        log_estimate = log(assessment1)
     )
 
 # export the same dataset
