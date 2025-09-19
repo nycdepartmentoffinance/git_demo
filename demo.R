@@ -10,7 +10,8 @@ output_data <- data %>%
     mutate(
         log_price = log(price),
         log_estimate = log(assessment1),
-        difference = log_price - log_estimate
+        difference = log_price - log_estimate,
+        log_price_squared = log_price^2
     )
 
 # export the same dataset
